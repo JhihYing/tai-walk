@@ -11,7 +11,7 @@
 
 
 ## Demo
-- https://jhihying.github.io/tai-walk/ (無RWD) 
+https://jhihying.github.io/tai-walk/ (無RWD) 
 
 
 ## 使用技術 / 套件
@@ -24,5 +24,15 @@
 【套件應用】Swiper (輪播圖)、Axios
 
 
+## 主要功能
+ - 關鍵字搜尋
+ - 依照縣市、主題、日期來篩選資料
+ - 顯示搜尋結果的週邊資訊 (三公里以內的景點、活動、美食)
+ - 隨機排列的推薦資訊
+
+
 ## 參考資料
-- [いとう養雞場](http://ito-eggfarm.com/)
+第三屆 F2E 的第一關 「臺灣旅遊景點導覽」
+
+- 設計師：[早餐](https://2021.thef2e.com/users/6296427084285739247/)
+- 資料來源：[TDX API](https://tdx.transportdata.tw/api-service/swagger#/Tourism)
