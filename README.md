@@ -15,7 +15,7 @@ https://jhihying.github.io/tai-walk/ (無RWD)
 
 
 ## 使用技術 / 套件
-- 以手刻的方式來 開發 UI 介面
+- 以手刻的方式來開發 UI 介面
 - 透過 Axios套件 串接 TDX API 來取得旅遊資料
 - 使用 Google Maps Embed Api 獲得相對應的地圖資訊
 
