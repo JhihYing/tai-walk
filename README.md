@@ -11,7 +11,7 @@
 
 
 ## Demo
-https://jhihying.github.io/tai-walk/ (無RWD) 
+https://tai-walk.vercel.app/index.html (無RWD) 
 
 
 ## 使用技術 / 套件
