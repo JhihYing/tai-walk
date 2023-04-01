@@ -1,0 +1,31 @@
+// 活動 (近期活動、查看更多活動)
+.activity-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  h2 {
+    @include font($gray-600, 400, 30px);
+  }
+  a {
+    @include font($accent-one, 400);
+    padding-right: 20px;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &::after {
+      content: "";
+      @include img-png(arrow-right-o);
+      width: 10px;
+      height: 15px;
+      position: absolute;
+      right: 0px;
+      top: 1px;
+    }
+  }
+}

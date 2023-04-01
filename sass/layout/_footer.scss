@@ -1,0 +1,10 @@
+footer {
+  padding: 15px 100px;
+  background-color: $secondary;
+  text-align: center;
+
+  h6 {
+    @include font($white, 500, fontSize-h6);
+    padding: 10px 0px;
+  }
+}

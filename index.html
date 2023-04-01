@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>台灣走走．Tai Walk</title>
+  
+  <!-- swiper套件 (輪播) -->
+  <link rel="stylesheet" href="./vendors/swiper/swiper-bundle.css">
+
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <!-- header區域 -->
+  <header>
+    <a class="logo" href="./index.html">
+      <img src="./images/logo-desktop.png" alt="台灣走走．Tai Walk">
+    </a>
+    <ul class="nav">
+      <li><a href="./search-tourism.html">探索景點</a></li>
+      <li><a href="./search-festival.html">節慶活動</a></li>
+      <li><a href="./search-food.html">美食饗宴</a></li>
+    </ul>
+  </header>
+
+
+  <!-- 主要內容區域 -->
+  <main>
+    <!-- 搜尋區 -->
+    <section class="search">
+      <div class="search-title">
+        <h1>探索台灣之美<br>讓我們更親近這片土地</h1>
+        <div class="travel-title">
+          <div class="travel-icon"></div>
+          <span class="travel-CHtext">台灣旅遊景點導覽</span>
+          <span class="travel-ENtext">Taiwan Travel Guide</span>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <div class="l-search-item search-option themeList">
+          <a href="">選擇主題</a> 
+          <ul class="l-drowDown-list themeDrowDown">
+            <li><a href="" class="active" data-theme="探索景點">探索景點</a></li>
+            <li><a href="" data-theme="節慶活動">節慶活動</a></li>
+            <li><a href="" data-theme="美味饗宴">美味饗宴</a></li>
+          </ul>
+        </div> 
+
+        <input class="l-search-text search-text" type="text" placeholder="你想去哪裡?請輸入關鍵字">
+        <button  class="searchBtn-m search-btn">搜尋</button>
+      </div>
+
+    </section>
+
+    <!-- 輪播圖區 -->
+    <section class="banner swiper" id="swiper1">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="background-image: url(./images/banner01.jpg); background-position: center; background-size: cover;">
+        新北市 | 不厭亭</div>
+  
+        <div class="swiper-slide" style="background-image: url(./images/banner02.jpg); background-position: center; background-size: cover;">
+        花蓮縣 | 清水斷崖</div>
+        
+        <div class="swiper-slide three" style="background-image: url(./images/banner03.jpg); background-position: center; background-size: cover;">新北市 | 漁人碼頭</div>
+        
+        <div class="swiper-slide three" style="background-image: url(./images/banner04.jpg); background-position: center; background-size: cover;">
+        新北市 | 九份老街</div>
+
+        <div class="swiper-slide three" style="background-image: url(./images/banner05.jpg); background-position: center; background-size: cover;">
+        臺北市 | 象山親山步道</div>
+      </div>
+
+      <!-- 左右箭頭 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- 小圓點 -->
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- 近期活動區 -->
+    <section class="activity">
+      <div class="activity-title">
+        <h2>近期活動</h2>
+        <a href="./search-festival.html">查看更多活動</a>
+      </div>
+
+      <!-- JS顯示出資料 -->
+      <ul class="activity-item" data-element="jsList">
+        <!-- <li>
+          <a href="#">
+            <div class="activity-img">
+              <img src="./images/activity01.jpg" alt="">
+            </div>
+            <div class="activity-text">
+              <div class="text-top">
+                <p>2021-12-03 - 2022-01-25</p>
+                <h3>2021日月潭花火音樂節</h3>
+              </div>
+              <div class="text-button">
+                <p>南投縣</p>
+                <p>詳細介紹</p>
+              </div>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+
+    <!-- 熱門打卡景點 -->
+    <section class="tourist">
+      <div class="activity-title">
+        <h2>熱門打卡景點</h2>
+        <a href="./search-tourism.html">查看更多景點</a>
+      </div>
+      <ul class="index-card" data-tourist="tourist-jsList">
+        <!-- <li>
+          <a href="#">
+            <div class="card-img">
+              <img src="./images/tourist01.jpg" alt="">
+            </div>
+            <div class="card-text">
+              <h3>二延平步道(整修中)</h3>
+              <p>嘉義縣</p>
+            </div>
+          </a>
+        </li>-->
+      </ul>
+    </section>
+
+    <!-- 一再回訪美食區  -->
+    <section class="food">
+      <div class="activity-title">
+        <h2>一再回訪美食</h2>
+        <a href="./search-food.html">查看更多美食</a>
+      </div>
+      <ul class="index-card" data-food="food-jsList">
+        <!-- <li>
+          <a href="#">
+            <div class="card-img">
+              <img src="./images/tourist01.jpg" alt="">
+            </div>
+            <div class="card-text">
+              <h3>二延平步道(整修中)</h3>
+              <p>嘉義縣</p>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+  </main>
+
+
+  <!-- footer區域 -->
+  <footer data-footer="footer">
+    <h6>台灣旅遊景點導覽 | UI design by Breakfast</h6>
+  </footer>
+
+  <!-- axios套件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+  <!-- jsSHA套件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+  
+  <!-- swiper套件 (輪播) -->
+  <script src="./vendors/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Underscore.js套件 -->
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
+
+  <!-- jQuery CDN (上線版) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/all.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/footer.js"></script>
+</body>
+</html>

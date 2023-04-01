@@ -1,0 +1,22 @@
+.l-search {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  display: flex;
+  position: relative;
+}
+
+.category {
+  margin-bottom: 120px;
+
+  h2 {
+    @include font($gray-600, 400, 30px);
+    margin-bottom: 15px;
+  }
+  .category-item {
+    li {
+      a {
+        @include font(red, 700, 24px);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.searchBtn-m {
+  @include font($white, 700);
+  @include btn-m();
+  padding-left: 40px;
+  background-color: $btn-color;
+  letter-spacing: 20px;
+  cursor: pointer;
+  transition: all .3s;
+  position: relative;
+  margin-left: 15px;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: $secondary;
+  }
+  &::before {
+    content: "";
+    @include img-png(search);
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 50px;
+    top: 11px;
+  }
+}

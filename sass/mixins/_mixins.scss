@@ -1,0 +1,62 @@
+// 字體樣式
+@mixin font($color, $w, $s:16px) {
+  color: $color;
+  font-weight: $w; //300 ,400 ,500 ,700 ,900
+  font-size: $s;
+  letter-spacing: 1px;
+}
+
+// 按鈕 big
+@mixin btn-b() {
+  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+  border: none;
+}
+
+// 按鈕 medium
+@mixin btn-m() {
+  border-radius: 5px;
+  width: 210px;
+  height: 50px;
+  border: none;
+}
+
+// png 圖片
+@mixin img-png($u, $r:no-repeat, $z:contain) {
+  background-image: url("../images/#{$u}.png");
+  background-repeat: $r;
+  background-size: $z;
+}
+
+// jpg 圖片
+@mixin img-jpg($u, $r:no-repeat, $z:cover) {
+  background-image: url("../images/#{$u}.jpg");
+  background-repeat: $r;
+  background-size: $z;
+}
+
+// RWD
+@mixin mobile(){ // 手機板
+	@media all and (max-width: 576px){
+		@content;
+	}
+}
+
+@mixin iPad(){ // 平板
+	@media all and (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin laptop(){ // 筆電
+	@media all and (max-width: 992px){
+		@content;
+	}
+}
+
+@mixin desktop(){ // 桌機板
+	@media all and (max-width: 1200px){
+		@content;
+	}
+}

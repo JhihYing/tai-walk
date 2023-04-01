@@ -1,0 +1,154 @@
+.banner {
+  @include img-jpg(banner01);
+  background-position: center;
+  margin: 30px 0px;
+  cursor: auto;
+}
+
+// 內文介紹
+.page-introduce {
+  margin-bottom: 60px;
+
+  .page-title {
+    margin-bottom: 30px;
+
+    h2 {
+      @include font($gray-600, 400, $fontSize-h2);
+      margin-bottom: 25px;
+    }
+    a {
+      @include font($accent-two, 400);
+      border-radius: 50px;
+      border: 1px solid $accent-two;
+      padding: 3px 10px;
+      margin-right: 10px;
+
+      // &:hover {
+      //   opacity: 0.7;
+      // }
+    }
+  }
+  .page-text {
+    margin-top: 40px;
+
+    h4 {
+      @include font($gray-500, 600, $fontSize-h4);
+      margin-bottom: 10px;
+    }
+    p {
+      @include font($gray-500, 300, 16px);
+      line-height: 30px;
+    }
+  }
+}
+
+// 相關資訊 (左半邊-基本資料)
+.information {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  .info-text {
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    width: 540px;
+
+    li {
+      display: flex;
+      margin-bottom: 13px;
+
+      h5 {
+        @include font($gray-500, 600, $fontSize-h5);
+        margin-right: 5px;
+        flex-shrink: 0;
+        line-height: 30px;
+      }
+      p {
+        @include font($gray-500, 400);
+        line-height: 30px;
+      }
+      a {
+        @include font($primary, 400);
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+// 相關資訊 (右半邊-地圖)
+.info-map {
+  .google-map {
+    width: 540px;
+    height: 250px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+
+    overflow: hidden;
+  }
+}
+// 相關資訊 (右半邊-附近資訊)
+.near-tourism {
+  h5 {
+    @include font($gray-500, 600, $fontSize-h5);
+    margin: 32px 0px 20px 0px;
+  }
+}
+.near-items {
+  display: flex;
+  justify-content: space-between;
+
+  li{
+    border: 2px solid $gray-100;
+    border-radius: 12px;
+    transition: all 0.3s;
+
+    &:hover{
+      border: 2px solid $btn-color; 
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // text-align: center;
+      padding: 30px 47px;
+
+      &:hover .near-icon01{
+        @include img-png(nearHover-icon01) 
+      }
+      &:hover .near-icon02{
+        @include img-png(nearHover-icon02) 
+      }
+      &:hover .near-icon03{
+        @include img-png(nearHover-icon03) 
+      }
+
+      div {
+        width: 26px;
+        height: 22px;
+      }
+      .near-icon01 {
+        @include img-png(near-icon01); 
+        transition: all 0.3s;
+      }
+      .near-icon02 {
+        @include img-png(near-icon02); 
+        transition: all 0.3s;
+      }
+      .near-icon03 {
+        @include img-png(near-icon03); 
+        transition: all 0.3s;
+      }
+      p {
+        @include font($btn-color, 500);
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+// 其他景點推薦區
+.others {
+  margin-bottom: 120px;
+}

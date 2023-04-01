@@ -1,0 +1,195 @@
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  // border: 1px solid pink;
+  padding: 0px 50px;
+}
+
+// 搜尋區
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 82px 0 60px 0;
+
+  // 搜尋區 | 左邊
+  .search-title {
+    margin-right: 77px;
+
+    h1 {
+      @include font($gray-600, 300, $fontSize-h1);
+      line-height: 70px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 187px;
+        height: 3px;
+        background-color: $tertiary;
+        position: absolute;
+        right: 198px;
+        top: 67px;
+        border-radius: 10px;
+      }
+    }
+    .travel-title {
+      margin-top: 17px;
+      display: flex;
+      align-items: center;
+      
+      .travel-icon {
+        @include img-png(Location);
+        width: 15px;
+        height: 18px;
+      }
+      .travel-CHtext {
+        @include font($gray-400, 400, $fontSize-h4);
+        margin: 0px 8px;
+      }
+      .travel-ENtext {
+        @include font($gray-400, 700, $fontSize-h5);
+        font-family: 'Playfair Display', serif;
+      }
+    }
+  }
+
+  // 搜尋區 | 右邊
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .search-option {
+      @include btn-b();
+      border: 1px solid $gray-100;
+      padding-left: 30px;
+      padding-right: 23px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        @include img-png(arrow-down);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 23px;
+      }
+
+      & > a {
+        @include font($primary, 500);
+      }
+    }
+    // .option-open {
+    //   display: none;
+    // }
+    .search-text {
+      @include font($gray-200, 300);
+      @include btn-b();
+      background-color: $bg-primary;
+      border: 1px solid $gray-100;
+      margin: 10px 0px;
+      padding-left: 30px;
+    }
+    .search-btn {
+      @include font($white, 700);
+      @include btn-b();
+      padding-left: 40px;
+      background-color: $btn-color;
+      letter-spacing: 20px;
+      cursor: pointer;
+      transition: all .3s;
+      position: relative;
+      // margin-left: 0;
+      
+      // 新增
+      width: 348px;
+      margin-left: 1px;
+
+      &:hover {
+        background-color: $secondary;
+      }
+      &::before {
+        content: "";
+        @include img-png(search);
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        left: 115px;
+        top: 11px;
+      }
+    }
+  }
+}
+
+// 輪播圖區
+.banner {
+  width: 1100px;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  cursor: grab;
+
+  .swiper-wrapper {
+    background-color: white;
+    text-align: center;
+    line-height: 18.5;
+    @include font($white, 700, $fontSize-h3);
+  }
+}
+
+// 輪播圖區 | 更改樣式
+.swiper-pagination-bullet {
+  background-color: $gray-100;
+  border: 2px solid $white
+}
+.swiper-pagination-bullet-active{
+  background-color: $white;
+  // border: 1.5px solid $gray-200;
+  width: 9px;
+  height: 9px;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 9px;
+  color: $white;
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 6px 9px;
+  background-color: rgba(0,0,0,0.1);
+}
+.swiper-button-prev {
+  margin-left: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+.swiper-button-next {
+  margin-right: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// 活動區域
+.activity {
+  // border: 1px solid red;
+  margin-bottom: 60px;
+}
+
+// 熱門景點區域
+.tourist {
+  // border: 1px solid red;
+  margin-bottom: 60px;
+}
+
+// 一再而訪美食區域
+.food {
+  // border: 1px solid red;
+  margin-bottom: 120px;
+}

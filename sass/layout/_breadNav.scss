@@ -1,0 +1,25 @@
+// 麵包屑
+.breadNav {
+  margin-top: 60px;
+
+  a {
+    @include font($primary, 400);
+    transition: all 0.3s;
+    
+    &:hover {
+      color: $gray-400;
+    }
+
+    &:last-child {
+      @include font($gray-400, 400);
+    }
+  }
+  span {
+    margin: 0px 5px;
+    color: $gray-400;
+  }
+}
+
+a[data-navCity="navCity"]:hover{
+  color: #6E7D60;
+}

@@ -1,0 +1,115 @@
+.l-category-item {
+  display: grid;
+  grid-template-columns: 255px 255px 255px 255px;
+  justify-content: space-between;
+  gap: 15px;
+
+  li {
+    width: 255px;
+    height: 124px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include img-jpg(banner03);
+    transition: all 0.3s;
+    position: relative;
+
+    // 遮罩
+    &::after {
+      content: "";
+      background-color: rgba(26, 26, 26, 0.363);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      border-radius: 12px;
+    }
+    
+    &:hover {
+      opacity: 0.7;
+    }
+
+    a {
+      @include font($white, 500, $fontSize-h3);
+      padding: 51px 70px; // 暫定寫法
+      z-index: 2;
+    }
+  }
+}
+
+// 探索景點
+li.tour-Nature {
+  @include img-jpg(tourism01);
+  background-position: bottom;
+}
+li.tour-Factory {
+  @include img-jpg(tourism02);
+  background-position: bottom;
+}
+li.tour-Art {
+  @include img-jpg(tourism03);
+}
+li.tour-Temple {
+  @include img-jpg(tourism04);
+  background-position: bottom;
+}
+li.tour-Sports {
+  @include img-jpg(tourism05);
+  background-position: center;
+}
+li.tour-HotSpring {
+  @include img-jpg(tourism06);
+  background-position: bottom;
+}
+li.tour-History {
+  @include img-jpg(tourism07);
+  background-position: center;
+}
+
+// 節慶活動
+li.festival-happy {
+  @include img-jpg(festival01);
+  background-position: center;
+}
+li.festival-Years {
+  @include img-jpg(festival02);
+  background-position: bottom;
+}
+li.festival-Art {
+  @include img-jpg(festival03);
+  background-position: center;
+}
+
+// 美食饗宴
+li.food-Local {
+  @include img-jpg(food01);
+  background-position: center;
+}
+li.food-Chinese {
+  @include img-jpg(food02);
+  background-position: center;
+}
+li.food-Ice {
+  @include img-jpg(food03);
+  background-position: bottom;
+}
+li.food-Foreign {
+  @include img-jpg(food04);
+  background-position: 6px 0px 0px 0px;
+}
+li.food-Gift {
+  @include img-jpg(food05);
+  background-position: center;
+}
+li.food-Vegan {
+  @include img-jpg(food06);
+  background-position: bottom;
+}
+
+
+
+.festival-none {
+  visibility: hidden;
+}

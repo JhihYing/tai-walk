@@ -1,0 +1,17 @@
+.tourist-result {
+  // border: 1px solid red;
+  margin-bottom: 100px;
+}
+
+.activity-total {
+  justify-content: normal;
+
+  p {
+    @include font($gray-400, 400);
+    margin-left: 10px;
+
+    span {
+      @include font($accent-two, 400);
+    }
+  }
+}

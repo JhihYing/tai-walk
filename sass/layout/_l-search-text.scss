@@ -1,0 +1,21 @@
+.l-search-text {
+  @include font($gray-500, 400);
+  @include btn-b();
+  width: 100%;
+  background-color: $bg-primary;
+  border: 1px solid $gray-100;
+  padding-left: 30px;
+
+  // 提示字顏色
+  &::-webkit-input-placeholder{
+    color: $gray-200;
+  }
+  
+
+  // 輸入框顏色
+  &:focus-visible {
+    outline: none;
+    color: $gray-500;
+    font-weight: 400;
+  }
+}

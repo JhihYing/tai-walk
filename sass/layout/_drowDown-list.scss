@@ -1,0 +1,47 @@
+.drowDown-list {
+  display: none;
+  border-radius: 5px;
+  border: 1px solid $gray-100;
+  margin-top: 7px;
+  overflow: hidden;
+  position: absolute;
+  width: 100.1%;
+  z-index: 1;
+  top: 52px;
+  left: 0px;
+
+  li {
+    background-color: $white;
+
+    &:last-child a::after {
+      content: "";
+      display: none;
+    }
+
+    &:hover {
+      background-color: rgb(226, 233, 226);
+    }
+
+    a {
+      @include font($gray-500, 400);
+      display: block;
+      padding: 15px 30px;
+      position: relative;
+      
+      &::after {
+        content: "";
+        width: 100%;
+        height: 10px;
+        border-bottom: 1px solid $gray-100;
+        // background-color: red;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+
+      &.active {
+        background-color: rgb(226, 233, 226);
+      }
+    }
+  }
+}

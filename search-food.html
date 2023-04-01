@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>台灣走走．Tai Walk</title>
+
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <!-- header區域 -->
+  <header>
+    <a class="logo" href="./index.html">
+      <img src="./images/logo-desktop.png" alt="台灣走走．Tai Walk">
+    </a>
+    <ul class="nav">
+      <li><a href="./search-tourism.html">探索景點</a></li>
+      <li><a href="./search-festival.html">節慶活動</a></li>
+      <li><a href="./search-food.html" class="active">美食饗宴</a></li>
+    </ul>
+  </header>
+
+  <!-- 主要內容區域 -->
+  <main>
+    <!-- 麵包屑 -->
+    <div class="breadNav">
+      <a href="./index.html">首頁</a>
+      <span>/</span>
+      <a href="">美食饗宴</a>
+    </div>
+
+    <!-- 搜尋區 -->
+    <section class="l-search">
+      <div class="l-search-item cityList"> <!-- data-cityList="cityList" -->
+        <a href="" data-allCity="allCityDefault">選擇縣市</a>
+        <ul class="l-drowDown-list cityDrowDown"> <!-- data-cityDrowDown="cityDrowDown" -->
+          <li><a href="" class="active" data-categoly="allCity">全部縣市</a></li>
+          <li><a href="" data-categoly="Taipei">臺北市</a></li>
+          <li><a href="" data-categoly="NewTaipei">新北市</a></li>
+          <li><a href="" data-categoly="Keelung">基隆市</a></li>
+          <li><a href="" data-categoly="YilanCounty">宜蘭縣</a></li>
+          <li><a href="" data-categoly="Taoyuan">桃園市</a></li>
+          <li><a href="" data-categoly="HsinchuCounty">新竹縣</a></li>
+          <li><a href="" data-categoly="Hsinchu">新竹市</a></li>
+          <li><a href="" data-categoly="MiaoliCounty">苗栗縣</a></li>
+          <li><a href="" data-categoly="Taichung">臺中市</a></li>
+          <li><a href="" data-categoly="ChanghuaCounty">彰化縣</a></li>
+          <li><a href="" data-categoly="NantouCounty">南投縣</a></li>
+          <li><a href="" data-categoly="YunlinCounty">雲林縣</a></li>
+          <li><a href="" data-categoly="ChiayiCounty">嘉義縣</a></li>
+          <li><a href="" data-categoly="Chiayi">嘉義市</a></li>
+          <li><a href="" data-categoly="Tainan">臺南市</a></li>
+          <li><a href="" data-categoly="Kaohsiung">高雄市</a></li>
+          <li><a href="" data-categoly="PingtungCounty">屏東縣</a></li>
+          <li><a href="" data-categoly="HualienCounty">花蓮縣</a></li>
+          <li><a href="" data-categoly="TaitungCounty">臺東縣</a></li>
+          <li><a href="" data-categoly="PenghuCounty">澎湖縣</a></li>
+          <li><a href="" data-categoly="KinmenCounty">金門縣</a></li>
+          <li><a href="" data-categoly="LienchiangCounty">連江縣</a></li>
+        </ul>
+      </div>  
+      
+      <div class="l-search-item themeList">
+        <a href="" data-allTheme="allThemeDefault">選擇主題</a>
+        <ul class="l-drowDown-list themeDrowDown">
+          <li><a href="" class="active" data-theme ="allTheme">全部主題</a></li>
+          <li><a href="" data-theme="地方特產">地方特產</a></li>
+          <li><a href="" data-theme="異國料理">異國料理</a></li>
+          <li><a href="" data-theme="中式美食">中式美食</a></li>
+          <li><a href="" data-theme="火烤料理">火烤料理</a></li>
+          <li><a href="" data-theme="素食">素食</a></li>
+          <li><a href="" data-theme="甜點冰品">甜點冰品</a></li>
+          <li><a href="" data-theme="夜市小吃">夜市小吃</a></li>
+          <li><a href="" data-theme="伴手禮">伴手禮</a></li>
+          <li><a href="" data-theme="其他">其他</a></li>
+        </ul>
+      </div>  
+
+      <input class="l-search-text" type="text" placeholder="你想去哪裡?請輸入關鍵字">
+      <button  class="searchBtn-m">搜尋</button>
+    </section>
+
+    <!-- 熱門主題 -->
+    <section class="category">
+      <h2>熱門主題</h2>
+      <ul class="l-category-item">
+        <li class="food-Local">
+          <a data-catLocal="catLocal" href="">地方特產</a>
+        </li>
+        <li class="food-Chinese">
+          <a data-catChinese="catChinese" href="">中式美食</a>
+        </li>
+        <li class="food-Ice">
+          <a data-catIce="catIce" href="">甜點冰品</a>
+        </li>
+        <li class="food-Foreign">
+          <a data-catForeign="catForeign" href="">異國料理</a>
+        </li>
+        <li class="food-Gift">
+          <a data-catGift="catGift" href="">伴手禮</a>
+        </li>
+        <li class="food-Vegan">
+          <a data-catVegan="catVegan" href="">素食</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 這邊要先隱藏 -->
+    <!-- 搜尋結果 -->
+    <section class="tourist-result" style="display: none;">
+      <div class="activity-title activity-total">
+        <h2>搜尋結果</h2>
+        <p>共有 <span data-total="total"></span> 筆</p>
+      </div>
+      <ul data-jsList="jsList" class="index-card"></ul>
+    </section>
+
+    <!--   分頁按鈕   -->
+    <nav class="page" aria-label="Page navigation example">
+      <ul class="pagination pages" style="display: none;"></ul>
+    </nav>
+
+    <!-- 查無資料 -->
+    <div class="nonePage">
+      <!-- <div class="nonePage-image"></div>
+      <h4>目前查無資料</h4>
+      <h4>請重新搜尋</h4> -->
+    </div>
+  </main>
+
+  <!-- footer區域 -->
+  <footer>
+    <h6>台灣旅遊景點導覽 | UI design by Breakfast</h6>
+  </footer>
+
+  <!-- axios套件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+  <!-- jsSHA套件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+
+  <!-- jQuery CDN (上線版) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/search-food.js"></script>
+  <script src="./js/menuSearch-food.js"></script>
+</body>
+</html>
