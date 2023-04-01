@@ -1,5 +1,5 @@
 # 台灣走走．Tai Walk | 2022.03
-![](https://i.imgur.com/5tva0po.jpg)
+![](https://i.imgur.com/Wb4BULe.jpg)
 
 ## 專案說明
 以 台灣旅遊景點導覽 為主題的網站。
